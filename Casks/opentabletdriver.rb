@@ -26,7 +26,6 @@ cask "opentabletdriver" do
 
   zap trash: [
     "~/Library/Application Support/OpenTabletDriver",
-    "~/.config/OpenTabletDriver",
     "~/Library/Preferences/com.opentabletdriver.plist",
   ]
 end
