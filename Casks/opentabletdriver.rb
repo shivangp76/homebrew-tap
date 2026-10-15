@@ -19,9 +19,7 @@ cask "opentabletdriver" do
   postflight_steps do
     # Releases aren't notarized, so Gatekeeper will flag them as "damaged"
     # unless the quarantine attribute is stripped.
-    system_command "/usr/bin/xattr",
-                    args: ["-cr", "#{appdir}/OpenTabletDriver.app"],
-                    sudo: false
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/OpenTabletDriver.app"]
   end
 
   zap trash: [
