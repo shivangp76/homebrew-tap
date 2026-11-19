@@ -27,6 +27,7 @@ cask "flameshot" do
   depends_on macos: :sequoia
 
   app "Flameshot.app"
+  binary "#{appdir}/Flameshot.app/Contents/MacOS/flameshot"
 
   postflight_steps do
     # Releases are ad-hoc signed but not notarized, so Gatekeeper will reject them
