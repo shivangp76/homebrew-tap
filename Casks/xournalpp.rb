@@ -20,6 +20,7 @@ cask "xournalpp" do
   depends_on :macos
 
   app "Xournal++.app"
+  binary "#{appdir}/Xournal++.app/Contents/MacOS/xournalpp"
 
   postflight_steps do
     # Releases aren't notarized and ship a broken ad-hoc signature ("code has no resources but
